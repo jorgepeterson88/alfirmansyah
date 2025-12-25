@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AL FIRMANSYAH</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 5rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        h2 {
+            @apply text-3xl font-bold gradient-text mb-6;
+        }
+        
+        h3 {
+            @apply text-xl font-semibold text-purple-400 mb-4;
+        }
+        
+        ul {
+            @apply list-disc list-inside space-y-2 text-gray-300;
+        }
+        
+        .contact-info {
+            @apply bg-gradient-to-r from-purple-900 to-pink-900 p-6 rounded-xl;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">AL FIRMANSYAH</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-purple-400">Beranda</a>
+                <a href="index.html#services" class="nav-link text-white hover:text-purple-400">Layanan</a>
+                <a href="index.html#about" class="nav-link text-white hover:text-purple-400">Tentang</a>
+                <a href="index.html#portfolio" class="nav-link text-white hover:text-purple-400">Portfolio</a>
+                <a href="index.html#contact" class="nav-link text-white hover:text-purple-400">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-20">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-8 text-center">
+                Privacy Policy
+            </h1>
+            
+            <div class="text-center mb-12">
+                <p class="text-gray-300 text-lg">
+                    Terakhir diperbarui: 25 Juli 2024
+                </p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2>1. Pendahuluan</h2>
+                <p class="text-gray-300 mb-4">
+                    Selamat datang di Privacy Policy <span class="gradient-text font-bold">AL FIRMANSYAH</span>. Kami berkomitmen untuk melindungi privasi dan keamanan data pribadi Anda. Dokumen ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda ketika menggunakan layanan kami.
+                </p>
+                <p class="text-gray-300">
+                    Dengan menggunakan layanan <span class="gradient-text font-bold">AL FIRMANSYAH</span>, Anda menyetujui praktik privasi yang dijelaskan dalam kebijakan ini.
+                </p>
+            </div>
+
+            <!-- Information Collection -->
+            <div class="content-section">
+                <h2>2. Pengumpulan Informasi</h2>
+                <h3>2.1 Informasi yang Kami Kumpulkan</h3>
+                <p class="text-gray-300 mb-4">Kami dapat mengumpulkan jenis informasi berikut:</p>
+                <ul>
+                    <li>Informasi identifikasi pribadi (nama, email, nomor telepon, alamat)</li>
+                    <li>Informasi demografis (usia, jenis kelamin, lokasi)</li>
+                    <li>Informasi teknis (alamat IP, browser, perangkat, sistem operasi)</li>
+                    <li>Informasi penggunaan (halaman yang dikunjungi, waktu kunjungan, interaksi)</li>
+                    <li>Informasi bisnis (nama perusahaan, jabatan, kebutuhan layanan)</li>
+                </ul>
+
+                <h3 class="mt-6">2.2 Cara Pengumpulan</h3>
+                <p class="text-gray-300 mb-4">Kami mengumpulkan informasi melalui:</p>
+                <ul>
+                    <li>Formulir kontak dan pendaftaran di website</li>
+                    <li>Komunikasi langsung (email, telepon, meeting)</li>
+                    <li>Cookies dan teknologi pelacakan lainnya</li>
+                    <li>Analitik dan monitoring website</li>
+                    <li>Media sosial dan platform digital lainnya</li>
+                </ul>
+            </div>
+
+            <!-- Use of Information -->
+            <div class="content-section">
+                <h2>3. Penggunaan Informasi</h2>
+                <p class="text-gray-300 mb-4">Kami menggunakan informasi yang dikumpulkan untuk:</p>
+                <ul>
+                    <li>Menyediakan dan meningkatkan layanan kami</li>
+                    <li>Merespons pertanyaan dan permintaan Anda</li>
+                    <li>Mengirimkan informasi tentang layanan dan promosi</li>
+                    <li>Melakukan analisis dan penelitian pasar</li>
+                    <li>Memastikan keamanan dan mencegah penipuan</li>
+                    <li>Mematuhi kewajiban hukum dan peraturan</li>
+                    <li>Mengembangkan produk dan layanan baru</li>
+                </ul>
+            </div>
+
+            <!-- Data Sharing -->
+            <div class="content-section">
+                <h2>4. Berbagi Informasi</h2>
+                <p class="text-gray-300 mb-4">Kami tidak menjual, memperdagangkan, atau menyewakan informasi pribadi Anda kepada pihak ketiga. Kami hanya berbagi informasi dalam keadaan berikut:</p>
+                <ul>
+                    <li>Dengan persetujuan Anda yang eksplisit</li>
+                    <li>Dengan mitra layanan tepercaya untuk menyediakan layanan</li>
+                    <li>Untuk mematuhi hukum, peraturan, atau proses hukum</li>
+                    <li>Untuk melindungi hak, privasi, keamanan, atau properti kami</li>
+                    <li>Dalam kasus transfer bisnis (merger, akuisisi, penjualan aset)</li>
+                </ul>
+            </div>
+
+            <!-- Data Security -->
+            <div class="content-section">
+                <h2>5. Keamanan Data</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> berkomitmen untuk melindungi keamanan informasi pribadi Anda. Kami menerapkan langkah-langkah keamanan teknis dan organisasial yang sesuai untuk:
+                </p>
+                <ul>
+                    <li>Enkripsi data selama transmisi dan penyimpanan</li>
+                    <li>Akses terbatas ke informasi pribadi</li>
+                    <li>Monitoring keamanan berkelanjutan</li>
+                    <li>Pelatihan staf tentang keamanan data</li>
+                    <li>Prosedur respons insiden yang tepat</li>
+                </ul>
+            </div>
+
+            <!-- Cookies -->
+            <div class="content-section">
+                <h2>6. Kebijakan Cookies</h2>
+                <p class="text-gray-300 mb-4">Website kami menggunakan cookies untuk:</p>
+                <ul>
+                    <li>Mengingat preferensi dan pengaturan Anda</li>
+                    <li>Menganalisis traffic dan penggunaan website</li>
+                    <li>Mempersonalisasi konten dan iklan</li>
+                    <li>Meningkatkan pengalaman pengguna</li>
+                </ul>
+                <p class="text-gray-300 mt-4">
+                    Anda dapat mengontrol penggunaan cookies melalui pengaturan browser Anda.
+                </p>
+            </div>
+
+            <!-- User Rights -->
+            <div class="content-section">
+                <h2>7. Hak Pengguna</h2>
+                <p class="text-gray-300 mb-4">Sebagai pengguna, Anda memiliki hak untuk:</p>
+                <ul>
+                    <li>Mengakses informasi pribadi yang kami simpan tentang Anda</li>
+                    <li>Memperbaiki informasi yang tidak akurat</li>
+                    <li>Menghapus informasi pribadi Anda</li>
+                    <li>Membatasi pengolahan informasi Anda</li>
+                    <li>Menolak pengolahan informasi untuk tujuan pemasaran</li>
+                    <li>Memindahkan informasi Anda ke layanan lain</li>
+                </ul>
+            </div>
+
+            <!-- Data Retention -->
+            <div class="content-section">
+                <h2>8. Retensi Data</h2>
+                <p class="text-gray-300 mb-4">
+                    Kami menyimpan informasi pribadi Anda selama diperlukan untuk tujuan yang dikumpulkan, kecuali periode penyimpanan yang lebih lama diperlukan atau diizinkan oleh hukum.
+                </p>
+                <p class="text-gray-300">
+                    Kriteria yang digunakan untuk menentukan periode retensi meliputi: tujuan pengumpulan, kebutuhan hukum, dan persetujuan Anda.
+                </p>
+            </div>
+
+            <!-- Children Privacy -->
+            <div class="content-section">
+                <h2>9. Privasi Anak</h2>
+                <p class="text-gray-300 mb-4">
+                    Layanan kami tidak ditujukan untuk anak-anak di bawah 13 tahun. Kami tidak sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun.
+                </p>
+                <p class="text-gray-300">
+                    Jika kami mengetahui bahwa kami telah mengumpulkan informasi pribadi dari anak di bawah 13 tahun tanpa persetujuan orang tua, kami akan mengambil langkah-langkah untuk menghapus informasi tersebut segera.
+                </p>
+            </div>
+
+            <!-- International Users -->
+            <div class="content-section">
+                <h2>10. Pengguna Internasional</h2>
+                <p class="text-gray-300 mb-4">
+                    Jika Anda mengakses layanan kami dari luar Indonesia, Anda menyetujui pengolahan informasi Anda di Indonesia dan negara lain di mana kami memiliki fasilitas.
+                </p>
+                <p class="text-gray-300">
+                    Kami memastikan bahwa transfer data internasional dilakukan dengan perlindungan yang sesuai.
+                </p>
+            </div>
+
+            <!-- Changes to Policy -->
+            <div class="content-section">
+                <h2>11. Perubahan Kebijakan</h2>
+                <p class="text-gray-300 mb-4">
+                    Kami dapat memperbarui kebijakan privasi ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal "Terakhir diperbarui" yang direvisi.
+                </p>
+                <p class="text-gray-300">
+                    Perubahan signifikan akan diberitahukan kepada Anda melalui email atau pemberitahuan lainnya.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="content-section">
+                <h2>12. Hubungi Kami</h2>
+                <p class="text-gray-300 mb-4">
+                    Jika Anda memiliki pertanyaan tentang kebijakan privasi ini atau praktik privasi kami, silakan hubungi kami:
+                </p>
+                
+                <div class="contact-info mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-building mr-2"></i>Informasi Perusahaan
+                            </h3>
+                            <p class="text-gray-200">AL FIRMANSYAH</p>
+                            <p class="text-gray-200">NIB: 0220000752353</p>
+                            <p class="text-gray-200">Creative Digital Agency</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-envelope mr-2"></i>Kontak Privasi
+                            </h3>
+                            <p class="text-gray-200">Email: kreativisindo@gmail.com</p>
+                            <p class="text-gray-200">Telepon: 082382466239</p>
+                            <p class="text-gray-200">Website: www.alfirmansyah.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-white mb-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Alamat
+                        </h3>
+                        <p class="text-gray-200">
+                            JL. P. NATAKUSUMA GG. KARANGANYAR NO. 31, Kel. Sungaibangkong, 
+                            Kec. Pontianak Kota, Kota Pontianak, Prov. Kalimantan Barat
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimer -->
+            <div class="content-section">
+                <h2>13. Penafian Hukum</h2>
+                <p class="text-gray-300 mb-4">
+                    Kebijakan privasi ini harus dibaca bersama dengan Syarat dan Ketentuan kami. Jika ada konflik antara kebijakan privasi dan syarat dan ketentuan, syarat dan ketentuan akan berlaku.
+                </p>
+                <p class="text-gray-300">
+                    Penggunaan layanan kami tunduk pada hukum yang berlaku di Republik Indonesia.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">AL FIRMANSYAH</h3>
+                    <p class="text-gray-400">Creative Digital Agency yang berfokus pada solusi inovatif untuk transformasi digital bisnis Anda.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Periklanan</li>
+                        <li>Produksi Konten</li>
+                        <li>Pengembangan Software</li>
+                        <li>Event Organizer</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-purple-400">Tentang Kami</a></li>
+                        <li><a href="index.html#portfolio" class="hover:text-purple-400">Portfolio</a></li>
+                        <li><a href="privacy.html" class="hover:text-purple-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-purple-400">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang layanan kami</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg flex-1 border border-gray-700">
+                        <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AL FIRMANSYAH. All rights reserved. | NIB: 0220000752353</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Hide back to top button initially
+        document.querySelector('.back-to-top').style.display = 'none';
+    </script>
+</body>
+</html>

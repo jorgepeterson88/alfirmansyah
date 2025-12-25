@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - AL FIRMANSYAH</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 5rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        h2 {
+            @apply text-3xl font-bold gradient-text mb-6;
+        }
+        
+        h3 {
+            @apply text-xl font-semibold text-purple-400 mb-4;
+        }
+        
+        ul {
+            @apply list-disc list-inside space-y-2 text-gray-300;
+        }
+        
+        .contact-info {
+            @apply bg-gradient-to-r from-purple-900 to-pink-900 p-6 rounded-xl;
+        }
+        
+        .warning-box {
+            @apply bg-red-900 bg-opacity-30 border border-red-500 p-4 rounded-lg mb-4;
+        }
+        
+        .info-box {
+            @apply bg-blue-900 bg-opacity-30 border border-blue-500 p-4 rounded-lg mb-4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">AL FIRMANSYAH</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-purple-400">Beranda</a>
+                <a href="index.html#services" class="nav-link text-white hover:text-purple-400">Layanan</a>
+                <a href="index.html#about" class="nav-link text-white hover:text-purple-400">Tentang</a>
+                <a href="index.html#portfolio" class="nav-link text-white hover:text-purple-400">Portfolio</a>
+                <a href="index.html#contact" class="nav-link text-white hover:text-purple-400">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-20">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-8 text-center">
+                Terms and Conditions
+            </h1>
+            
+            <div class="text-center mb-12">
+                <p class="text-gray-300 text-lg">
+                    Terakhir diperbarui: 25 Juli 2024
+                </p>
+            </div>
+
+            <!-- Agreement -->
+            <div class="content-section">
+                <h2>1. Kesepakatan dengan Syarat dan Ketentuan</h2>
+                <p class="text-gray-300 mb-4">
+                    Selamat datang di <span class="gradient-text font-bold">AL FIRMANSYAH</span>. Syarat dan Ketentuan ini mengatur penggunaan layanan yang disediakan oleh <span class="gradient-text font-bold">AL FIRMANSYAH</span> ("Kami," "Perusahaan," atau "AL FIRMANSYAH").
+                </p>
+                <p class="text-gray-300 mb-4">
+                    Dengan mengakses atau menggunakan layanan kami, Anda setuju untuk terikat oleh Syarat dan Ketentuan ini. Jika Anda tidak setuju dengan bagian mana pun dari syarat dan ketentuan ini, Anda tidak boleh menggunakan layanan kami.
+                </p>
+                <div class="info-box">
+                    <p class="text-blue-200">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <strong>Penting:</strong> Harap baca Syarat dan Ketentuan ini dengan cermat sebelum menggunakan layanan kami.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Company Information -->
+            <div class="content-section">
+                <h2>2. Informasi Perusahaan</h2>
+                <div class="contact-info">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-building mr-2"></i>Identitas Perusahaan
+                            </h3>
+                            <p class="text-gray-200"><strong>Nama:</strong> AL FIRMANSYAH</p>
+                            <p class="text-gray-200"><strong>NIB:</strong> 0220000752353</p>
+                            <p class="text-gray-200"><strong>Status:</strong> PMDN (Penanaman Modal Dalam Negeri)</p>
+                            <p class="text-gray-200"><strong>Jenis:</strong> Creative Digital Agency</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Alamat Kantor
+                            </h3>
+                            <p class="text-gray-200">
+                                JL. P. NATAKUSUMA GG. KARANGANYAR NO. 31<br>
+                                Kel. Sungaibangkong, Kec. Pontianak Kota<br>
+                                Kota Pontianak, Prov. Kalimantan Barat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Description -->
+            <div class="content-section">
+                <h2>3. Deskripsi Layanan</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> menyediakan berbagai layanan digital kreatif, termasuk namun tidak terbatas pada:
+                </p>
+                <ul>
+                    <li><strong>Periklanan (KBLI 73100):</strong> Jasa periklanan digital dan tradisional</li>
+                    <li><strong>Produksi Konten (KBLI 59112, 59132):</strong> Produksi film, video, dan program televisi</li>
+                    <li><strong>Pengembangan Software (KBLI 58200):</strong> Penerbitan piranti lunak dan aplikasi</li>
+                    <li><strong>Event Organizer (KBLI 82302):</strong> Perencanaan dan pelaksanaan acara</li>
+                    <li><strong>Konsultasi Manajemen (KBLI 70209):</strong> Konsultasi bisnis dan manajemen</li>
+                    <li><strong>Layanan Komputer (KBLI 47411, 26220):</strong> Perdagangan dan industri komputer</li>
+                    <li><strong>Layanan TI (KBLI 63111, 63112, 61922):</strong> Pengolahan data, hosting, dan sistem komunikasi</li>
+                </ul>
+            </div>
+
+            <!-- User Responsibilities -->
+            <div class="content-section">
+                <h2>4. Tanggung Jawab Pengguna</h2>
+                <h3>4.1 Penggunaan yang Diperbolehkan</h3>
+                <p class="text-gray-300 mb-4">Sebagai pengguna layanan kami, Anda setuju untuk:</p>
+                <ul>
+                    <li>Memberikan informasi yang akurat dan lengkap</li>
+                    <li>Menjaga kerahasiaan informasi login dan akses</li>
+                    <li>Menggunakan layanan sesuai dengan tujuan yang dimaksud</li>
+                    <li>Mematuhi hukum dan peraturan yang berlaku</li>
+                    <li>Tidak mengganggu atau merusak sistem kami</li>
+                </ul>
+
+                <h3 class="mt-6">4.2 Penggunaan yang Dilarang</h3>
+                <p class="text-gray-300 mb-4">Anda dilarang untuk:</p>
+                <ul>
+                    <li> Menggunakan layanan untuk kegiatan ilegal</li>
+                    <li> Mengirimkan konten yang melanggar hak cipta</li>
+                    <li> Melakukan spam atau penipuan</li>
+                    <li> Mencoba mengakses sistem tanpa otorisasi</li>
+                    <li> Mengganggu pengguna lain</li>
+                    <li> Menyalin atau mendistribusikan konten tanpa izin</li>
+                </ul>
+                <div class="warning-box">
+                    <p class="text-red-200">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        <strong>Peringatan:</strong> Pelanggaran terhadap ketentuan ini dapat mengakibatkan penghentian layanan dan tindakan hukum.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Payment Terms -->
+            <div class="content-section">
+                <h2>5. Ketentuan Pembayaran</h2>
+                <h3>5.1 Harga dan Biaya</h3>
+                <p class="text-gray-300 mb-4">
+                    Harga untuk layanan kami akan ditentukan berdasarkan kesepakatan antara <span class="gradient-text font-bold">AL FIRMANSYAH</span> dan klien. Harga dapat berubah sewaktu-waktu dengan pemberitahuan sebelumnya.
+                </p>
+
+                <h3 class="mt-6">5.2 Metode Pembayaran</h3>
+                <p class="text-gray-300 mb-4">Kami menerima metode pembayaran berikut:</p>
+                <ul>
+                    <li>Transfer Bank</li>
+                    <li>E-Wallet (jika tersedia)</li>
+                    <li>Kartu Kredit/Debit (jika tersedia)</li>
+                    <li>Metode lain yang disepakati bersama</li>
+                </ul>
+
+                <h3 class="mt-6">5.3 Jadwal Pembayaran</h3>
+                <p class="text-gray-300 mb-4">
+                    Pembayaran harus dilakukan sesuai dengan jadwal yang telah disepakati dalam kontrak atau proposal proyek. Keterlambatan pembayaran dapat dikenakan denda sesuai dengan ketentuan yang berlaku.
+                </p>
+            </div>
+
+            <!-- Intellectual Property -->
+            <div class="content-section">
+                <h2>6. Hak Kekayaan Intelektual</h2>
+                <h3>6.1 Hak Cipta AL FIRMANSYAH</h3>
+                <p class="text-gray-300 mb-4">
+                    Semua konten, desain, grafik, logo, dan materi lainnya yang dibuat oleh <span class="gradient-text font-bold">AL FIRMANSYAH</span> dilindungi oleh hak cipta dan merupakan milik eksklusif <span class="gradient-text font-bold">AL FIRMANSYAH</span>.
+                </p>
+
+                <h3 class="mt-6">6.2 Hak Klien</h3>
+                <p class="text-gray-300 mb-4">
+                    Setelah pembayaran penuh, klien memiliki hak untuk menggunakan hasil karya yang dibuat khusus untuk mereka sesuai dengan kesepakatan dalam kontrak. Namun, <span class="gradient-text font-bold">AL FIRMANSYAH</span> tetap memiliki hak untuk menggunakan karya tersebut dalam portfolio dan keperluan promosi.
+                </p>
+
+                <h3 class="mt-6">6.3 Lisensi</h3>
+                <p class="text-gray-300 mb-4">
+                    Klien diberikan lisensi non-eksklusif untuk menggunakan hasil karya untuk tujuan bisnis mereka. Penggunaan untuk tujuan komersial lainnya memerlukan izin tertulis dari <span class="gradient-text font-bold">AL FIRMANSYAH</span>.
+                </p>
+            </div>
+
+            <!-- Confidentiality -->
+            <div class="content-section">
+                <h2>7. Kerahasiaan</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> berkomitmen untuk menjaga kerahasiaan informasi klien. Informasi yang diberikan oleh klien akan digunakan hanya untuk tujuan penyediaan layanan dan tidak akan dibagikan kepada pihak ketiga tanpa persetujuan tertulis.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    Kewajiban kerahasiaan ini tetap berlaku bahkan setelah hubungan kerja sama berakhir.
+                </p>
+            </div>
+
+            <!-- Project Timeline -->
+            <div class="content-section">
+                <h2>8. Timeline Proyek</h2>
+                <h3>8.1 Estimasi Waktu</h3>
+                <p class="text-gray-300 mb-4">
+                    Timeline proyek akan ditentukan berdasarkan kompleksitas dan lingkup pekerjaan. Estimasi waktu yang diberikan bersifat perkiraan dan dapat berubah tergantung pada faktor-faktor tertentu.
+                </p>
+
+                <h3 class="mt-6">8.2 Penundaan</h3>
+                <p class="text-gray-300 mb-4">
+                    Jika terjadi penundaan dari pihak klien (seperti keterlambatan dalam memberikan materi atau persetujuan), timeline proyek akan disesuaikan secara proporsional.
+                </p>
+
+                <h3 class="mt-6">8.3 Revisi</h3>
+                <p class="text-gray-300 mb-4">
+                    Jumlah revisi yang disertakan dalam harga akan ditentukan dalam kontrak. Revisi tambahan akan dikenakan biaya tambahan sesuai dengan kesepakatan.
+                </p>
+            </div>
+
+            <!-- Termination -->
+            <div class="content-section">
+                <h2>9. Penghentian Layanan</h2>
+                <h3>9.1 Penghentian oleh Klien</h3>
+                <p class="text-gray-300 mb-4">
+                    Klien dapat menghentikan layanan dengan pemberitahuan tertulis minimal 7 hari kerja sebelumnya. Klien tetap bertanggung jawab untuk membayar semua biaya yang telah dikeluarkan hingga tanggal penghentian.
+                </p>
+
+                <h3 class="mt-6">9.2 Penghentian oleh AL FIRMANSYAH</h3>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> berhak menghentikan layanan jika:
+                </p>
+                <ul>
+                    <li>Klien melanggar syarat dan ketentuan</li>
+                    <li>Klien tidak melakukan pembayaran tepat waktu</li>
+                    <li>Adanya keadaan force majeure</li>
+                    <li>Alasan lain yang sah sesuai dengan hukum yang berlaku</li>
+                </ul>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="content-section">
+                <h2>10. Pembatasan Tanggung Jawab</h2>
+                <p class="text-gray-300 mb-4">
+                    Tanggung jawab <span class="gradient-text font-bold">AL FIRMANSYAH</span> terhadap klaim apa pun yang timbul dari atau terkait dengan layanan kami tidak akan melebihi jumlah total yang dibayar oleh klien untuk layanan tersebut.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> tidak bertanggung jawab atas kerugian tidak langsung, insidental, konsekuensial, atau hukuman.
+                </p>
+            </div>
+
+            <!-- Force Majeure -->
+            <div class="content-section">
+                <h2>11. Force Majeure</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> tidak bertanggung jawab atas kegagalan atau keterlambatan dalam pelaksanaan kewajiban kami jika disebabkan oleh keadaan di luar kendali kami, termasuk namun tidak terbatas pada:
+                </p>
+                <ul>
+                    <li>Bencana alam</li>
+                    <li>Perang atau konflik</li>
+                    <li>Pemogokan atau kerusuhan</li>
+                    <li>Kegagalan teknis dari pihak ketiga</li>
+                    <li>Kebijakan pemerintah</li>
+                    <li>Pandemi atau wabah penyakit</li>
+                </ul>
+            </div>
+
+            <!-- Dispute Resolution -->
+            <div class="content-section">
+                <h2>12. Penyelesaian Sengketa</h2>
+                <h3>12.1 Negosiasi</h3>
+                <p class="text-gray-300 mb-4">
+                    Jika terjadi sengketa terkait layanan kami, kedua belah pihak setuju untuk terlebih dahulu mencoba menyelesaikannya melalui negosiasi yang baik.
+                </p>
+
+                <h3 class="mt-6">12.2 Yurisdiksi</h3>
+                <p class="text-gray-300 mb-4">
+                    Jika sengketa tidak dapat diselesaikan melalui negosiasi, maka sengketa akan diselesaikan melalui pengadilan yang berwenang di Kota Pontianak, Kalimantan Barat, Indonesia.
+                </p>
+
+                <h3 class="mt-6">12.3 Hukum yang Berlaku</h3>
+                <p class="text-gray-300 mb-4">
+                    Syarat dan Ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum yang berlaku di Republik Indonesia.
+                </p>
+            </div>
+
+            <!-- Warranty -->
+            <div class="content-section">
+                <h2>13. Garansi</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> memberikan garansi untuk layanan yang kami berikan sesuai dengan kesepakatan dalam kontrak. Garansi ini mencakup:
+                </p>
+                <ul>
+                    <li>Kualitas hasil kerja sesuai standar industri</li>
+                    <li>Fungsionalitas sesuai spesifikasi yang disepakati</li>
+                    <li>Perbaikan bug atau error dalam periode garansi</li>
+                    <li>Dukungan teknis sesuai dengan paket layanan</li>
+                </ul>
+                <p class="text-gray-300 mt-4">
+                    Garansi tidak berlaku untuk kerusakan yang disebabkan oleh penggunaan yang tidak tepat, modifikasi tidak sah, atau faktor eksternal lainnya.
+                </p>
+            </div>
+
+            <!-- Communication -->
+            <div class="content-section">
+                <h2>14. Komunikasi</h2>
+                <p class="text-gray-300 mb-4">
+                    Semua komunikasi resmi antara klien dan <span class="gradient-text font-bold">AL FIRMANSYAH</span> harus dilakukan melalui:
+                </p>
+                <ul>
+                    <li>Email: kreativisindo@gmail.com</li>
+                    <li>Telepon: 082382466239</li>
+                    <li>Surat resmi ke alamat kantor</li>
+                </ul>
+                <p class="text-gray-300 mt-4">
+                    Komunikasi verbal atau melalui platform informal tidak dianggap sebagai komunikasi resmi kecuali dikonfirmasi secara tertulis.
+                </p>
+            </div>
+
+            <!-- Modifications -->
+            <div class="content-section">
+                <h2>15. Perubahan Syarat dan Ketentuan</h2>
+                <p class="text-gray-300 mb-4">
+                    <span class="gradient-text font-bold">AL FIRMANSYAH</span> berhak untuk mengubah Syarat dan Ketentuan ini dari waktu ke waktu. Perubahan akan diberitahukan kepada pengguna melalui:
+                </p>
+                <ul>
+                    <li>Pemberitahuan di website</li>
+                    <li>Email kepada klien yang terdaftar</li>
+                    <li>Pemberitahuan langsung untuk proyek yang sedang berjalan</li>
+                </ul>
+                <p class="text-gray-300 mt-4">
+                    Penggunaan layanan setelah perubahan dianggap sebagai penerimaan terhadap Syarat dan Ketentuan yang telah diperbarui.
+                </p>
+            </div>
+
+            <!-- Severability -->
+            <div class="content-section">
+                <h2>16. Pemisahan</h2>
+                <p class="text-gray-300 mb-4">
+                    Jika ada bagian dari Syarat dan Ketentuan ini dinyatakan tidak sah atau tidak dapat dilaksanakan, bagian tersebut akan dipisahkan dan sisanya akan tetap berlaku sepenuhnya.
+                </p>
+            </div>
+
+            <!-- Entire Agreement -->
+            <div class="content-section">
+                <h2>17. Kesepakatan Penuh</h2>
+                <p class="text-gray-300 mb-4">
+                    Syarat dan Ketentuan ini, bersama dengan semua dokumen yang dirujuk di dalamnya, merupakan kesepakatan penuh antara Anda dan <span class="gradient-text font-bold">AL FIRMANSYAH</span> mengenai penggunaan layanan kami.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="content-section">
+                <h2>18. Hubungi Kami</h2>
+                <p class="text-gray-300 mb-4">
+                    Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami:
+                </p>
+                
+                <div class="contact-info mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-building mr-2"></i>Informasi Perusahaan
+                            </h3>
+                            <p class="text-gray-200">AL FIRMANSYAH</p>
+                            <p class="text-gray-200">NIB: 0220000752353</p>
+                            <p class="text-gray-200">Creative Digital Agency</p>
+                        </div>
+                        <div>
+                            <h3 class="text-white mb-2">
+                                <i class="fas fa-envelope mr-2"></i>Kontak Bisnis
+                            </h3>
+                            <p class="text-gray-200">Email: kreativisindo@gmail.com</p>
+                            <p class="text-gray-200">Telepon: 082382466239</p>
+                            <p class="text-gray-200">Website: www.alfirmansyah.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-white mb-2">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Alamat Kantor
+                        </h3>
+                        <p class="text-gray-200">
+                            JL. P. NATAKUSUMA GG. KARANGANYAR NO. 31, Kel. Sungaibangkong, 
+                            Kec. Pontianak Kota, Kota Pontianak, Prov. Kalimantan Barat
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Agreement -->
+            <div class="content-section">
+                <h2>19. Pernyataan Akhir</h2>
+                <p class="text-gray-300 mb-4">
+                    Dengan menggunakan layanan <span class="gradient-text font-bold">AL FIRMANSYAH</span>, Anda mengakui bahwa Anda telah membaca, memahami, dan menyetujui untuk terikat oleh Syarat dan Ketentuan ini.
+                </p>
+                <p class="text-gray-300 mb-4">
+                    Terima kasih telah mempercayai <span class="gradient-text font-bold">AL FIRMANSYAH</span> sebagai mitra digital kreatif Anda.
+                </p>
+                <div class="info-box">
+                    <p class="text-blue-200">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        <strong>Informasi:</strong> Syarat dan Ketentuan ini berlaku efektif sejak 25 Juli 2024.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">AL FIRMANSYAH</h3>
+                    <p class="text-gray-400">Creative Digital Agency yang berfokus pada solusi inovatif untuk transformasi digital bisnis Anda.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Periklanan</li>
+                        <li>Produksi Konten</li>
+                        <li>Pengembangan Software</li>
+                        <li>Event Organizer</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-purple-400">Tentang Kami</a></li>
+                        <li><a href="index.html#portfolio" class="hover:text-purple-400">Portfolio</a></li>
+                        <li><a href="privacy.html" class="hover:text-purple-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-purple-400">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang layanan kami</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg flex-1 border border-gray-700">
+                        <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AL FIRMANSYAH. All rights reserved. | NIB: 0220000752353</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Hide back to top button initially
+        document.querySelector('.back-to-top').style.display = 'none';
+    </script>
+</body>
+</html>

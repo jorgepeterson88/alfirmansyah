@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL FIRMANSYAH - Creative Digital Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #0a0a0a;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #fda085 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease-in-out infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.8), 0 0 20px rgba(102, 126, 234, 0.6), 0 0 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-border {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            padding: 2px;
+            border-radius: 12px;
+        }
+        
+        .gradient-border-content {
+            background: #0a0a0a;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #667eea;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky-nav py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">AL FIRMANSYAH</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-purple-400">Beranda</a>
+                <a href="#services" class="nav-link text-white hover:text-purple-400">Layanan</a>
+                <a href="#about" class="nav-link text-white hover:text-purple-400">Tentang</a>
+                <a href="#portfolio" class="nav-link text-white hover:text-purple-400">Portfolio</a>
+                <a href="#contact" class="nav-link text-white hover:text-purple-400">Kontak</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white text-2xl" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <button onclick="toggleMenu()" class="absolute top-6 right-6 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#home" onclick="toggleMenu()" class="text-white text-xl hover:text-purple-400">Beranda</a>
+            <a href="#services" onclick="toggleMenu()" class="text-white text-xl hover:text-purple-400">Layanan</a>
+            <a href="#about" onclick="toggleMenu()" class="text-white text-xl hover:text-purple-400">Tentang</a>
+            <a href="#portfolio" onclick="toggleMenu()" class="text-white text-xl hover:text-purple-400">Portfolio</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-white text-xl hover:text-purple-400">Kontak</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-6 text-center text-white relative z-10">
+            <div class="floating">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 neon-text">
+                    AL FIRMANSYAH
+                </h1>
+                <p class="text-2xl md:text-3xl mb-8 font-light">
+                    Creative Digital Agency
+                </p>
+                <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-90">
+                    Transformasi digital kreatif dengan solusi inovatif untuk periklanan, konten multimedia, dan teknologi informasi
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('services')" class="btn-gradient text-lg px-8 py-4">
+                        Jelajahi Layanan
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-all duration-300">
+                        Hubungi Kami
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Layanan Kami</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Solusi komprehensif untuk kebutuhan digital dan kreatif bisnis Anda
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Advertising -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Periklanan</h3>
+                    <p class="text-gray-300 mb-4">
+                        Strategi periklanan digital yang kreatif dan efektif untuk meningkatkan brand awareness dan konversi
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Digital Advertising</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Social Media Marketing</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Brand Strategy</li>
+                    </ul>
+                </div>
+
+                <!-- Content Production -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Produksi Konten</h3>
+                    <p class="text-gray-300 mb-4">
+                        Pembuatan konten multimedia berkualitas tinggi untuk berbagai platform digital
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Video Production</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Content Creation</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Photography</li>
+                    </ul>
+                </div>
+
+                <!-- Software Development -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Pengembangan Software</h3>
+                    <p class="text-gray-300 mb-4">
+                        Solusi software custom dan aplikasi web yang inovatif untuk kebutuhan bisnis
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Web Development</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Mobile Apps</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Custom Software</li>
+                    </ul>
+                </div>
+
+                <!-- Event Organizer -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Event Organizer</h3>
+                    <p class="text-gray-300 mb-4">
+                        Perencanaan dan pelaksanaan event yang kreatif dan memorable
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Corporate Events</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Product Launching</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Virtual Events</li>
+                    </ul>
+                </div>
+
+                <!-- IT Consulting -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Konsultasi IT</h3>
+                    <p class="text-gray-300 mb-4">
+                        Konsultasi manajemen dan solusi teknologi informasi untuk transformasi digital
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>IT Strategy</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>System Integration</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Digital Transformation</li>
+                    </ul>
+                </div>
+
+                <!-- Computer Services -->
+                <div class="card-hover rounded-xl p-8 text-center">
+                    <div class="service-icon mb-4">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Layanan Komputer</h3>
+                    <p class="text-gray-300 mb-4">
+                        Penjualan dan layanan peralatan komputer serta aksesoris terlengkap
+                    </p>
+                    <ul class="text-left text-gray-400 space-y-2">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Computer Retail</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Technical Support</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Hardware Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Tentang <span class="text-white">AL FIRMANSYAH</span></h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        AL FIRMANSYAH adalah perusahaan creative digital agency yang berkomitmen untuk memberikan solusi inovatif dalam bidang periklanan, teknologi informasi, dan konten kreatif.
+                    </p>
+                    <p class="text-gray-300 text-lg mb-6">
+                        Dengan pengalaman yang luas dan tim yang kreatif, kami membantu bisnis untuk bertransformasi secara digital dan mencapai tujuan mereka dengan solusi yang efektif dan menarik.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">25+</div>
+                            <div class="text-gray-400">Layanan</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold gradient-text">100%</div>
+                            <div class="text-gray-400">Kreatif</div>
+                        </div>
+                    </div>
+                    <button onclick="scrollToSection('contact')" class="btn-gradient">
+                        Mulai Kolaborasi
+                    </button>
+                </div>
+                <div class="gradient-border">
+                    <div class="gradient-border-content">
+                        <h3 class="text-2xl font-bold text-white mb-6">KBLI Kami</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Periklanan (73100)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Produksi Film & Video (59112)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Penerbitan Software (58200)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Event Organizer (82302)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Konsultansi Manajemen (70209)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                                <span class="text-gray-300">Jasa Pendidikan Komputer (85492)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Portfolio</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Karya-karya terbaik kami yang telah membantu klien mencapai kesuksesan
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-ad text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Digital Campaign</h3>
+                        <p class="text-gray-400">Kampanye digital untuk brand fashion lokal</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-video text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Video Production</h3>
+                        <p class="text-gray-400">Produksi video untuk product launching</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Mobile App</h3>
+                        <p class="text-gray-400">Aplikasi mobile untuk e-commerce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Hubungi Kami</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Mari diskusikan bagaimana kami dapat membantu bisnis Anda berkembang
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="contact-form rounded-xl p-8">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="mb-6">
+                            <label class="block text-white mb-2">Nama Lengkap</label>
+                            <input type="text" class="form-input w-full" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-white mb-2">Email</label>
+                            <input type="email" class="form-input w-full" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-white mb-2">Subjek</label>
+                            <input type="text" class="form-input w-full" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-white mb-2">Pesan</label>
+                            <textarea class="form-input w-full h-32" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-gradient w-full">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-purple-400 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Alamat</div>
+                                <div class="text-gray-400">JL. P. NATAKUSUMA GG. KARANGANYAR NO. 31, Kel. Sungaibangkong, Kec. Pontianak Kota, Kota Pontianak, Prov. Kalimantan Barat</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-purple-400 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Telepon</div>
+                                <div class="text-gray-400">082382466239</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-purple-400 mr-4 text-xl"></i>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="text-gray-400">kreativisindo@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4">Ikuti Kami</h4>
+                        <div class="social-links flex">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">AL FIRMANSYAH</h3>
+                    <p class="text-gray-400">Creative Digital Agency yang berfokus pada solusi inovatif untuk transformasi digital bisnis Anda.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Periklanan</li>
+                        <li>Produksi Konten</li>
+                        <li>Pengembangan Software</li>
+                        <li>Event Organizer</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-purple-400">Tentang Kami</a></li>
+                        <li><a href="#portfolio" class="hover:text-purple-400">Portfolio</a></li>
+                        <li><a href="privacy.html" class="hover:text-purple-400">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-purple-400">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi terbaru tentang layanan kami</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="form-input flex-1 rounded-l-lg">
+                        <button class="btn-gradient rounded-l-none">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 AL FIRMANSYAH. All rights reserved. | NIB: 0220000752353</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Terima kasih! Pesan Anda telah kami terima. Kami akan segera menghubungi Anda.');
+            event.target.reset();
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.sticky-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-opacity-95');
+            } else {
+                nav.classList.remove('bg-opacity-95');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
